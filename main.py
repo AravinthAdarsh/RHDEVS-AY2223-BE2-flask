@@ -4,7 +4,9 @@ from flask import Flask
 from db import db
 
 
-# Write your flask code here
+@app.route("/")
+def index():
+  return "Welcome to the homepage"
 
 app = Flask(__name__)
 
