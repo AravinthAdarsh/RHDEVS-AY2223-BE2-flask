@@ -4,9 +4,12 @@ from flask import Flask
 from db import db
 
 
-@app.route("/")
+@app.route("/", methods=["GET"])
 def index():
   return "Welcome to the homepage"
+
+if __name__ == "__main__":
+  app.run()
 
 app = Flask(__name__)
 
